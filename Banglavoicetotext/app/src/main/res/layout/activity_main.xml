@@ -19,6 +19,17 @@
         android:textColor="#ffffff"
         android:textSize="30dp" />
 
+    <EditText
+        android:id="@+id/txtText"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:ems="10"
+        android:hint="Put your language iso code"
+        android:inputType="text"
+        android:textColor="@android:color/white"/>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
