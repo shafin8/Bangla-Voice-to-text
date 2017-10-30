@@ -2,6 +2,8 @@ package shafin.banglavoicetotext;
 
 import android.content.ActivityNotFoundException;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.GradientDrawable;
 import android.speech.RecognizerIntent;
 import android.speech.tts.TextToSpeech;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +34,8 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        setMenu("voice to text");
 
         txtText = (EditText) findViewById(R.id.txtText);
         output=(TextView)findViewById(R.id.textView);
@@ -130,5 +134,18 @@ if (lan==null){
     }
 
 
+    public void setMenu(String tittle){
+        GradientDrawable gradient = new GradientDrawable();
+        gradient.setColors(new int[]{
+                Color.parseColor("#3F51B5"),
+                Color.parseColor("#303F9F"),
 
+        });
+
+        gradient.setGradientType(GradientDrawable.LINEAR_GRADIENT);
+        gradient.setShape(GradientDrawable.RECTANGLE);
+        getSupportActionBar().setBackgroundDrawable(gradient);
+        getSupportActionBar().setTitle(tittle);
+
+    }
 }
